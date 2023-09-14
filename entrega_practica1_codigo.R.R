@@ -8,15 +8,15 @@ mm<- readline("ingrese cantidad de materias aprobadas")
 m<- as.numeric(mm)
 
 #manejo de datos
-nchar(l)
-puesto<- substr(l,1,4)
-nn<- substr(l,6,7)
+u<-as.numeric(nchar(l))
+puesto<- substr(l,u-1,u)
+nn<- substr(l,1,u-3)
 matap<- 20-m
 
 #presentacion de datos
-linea<- paste("el alumno ",n," se inscribiÃ³ como alumno de Exactas",
-" en el puesto ",puesto, " en el aÃ±o 20",nn," y debe aprobar ",
-matap," materias para obtener el tÃ­tulo de grado", sep="",
+linea<- paste("el alumno ",n," se inscribió como alumno de Exactas",
+" en el puesto ",puesto, " en el año 20",nn," y debe aprobar ",
+matap," materias para obtener el título de grado", sep="",
 collapse = "\n")
 print(linea)
 
